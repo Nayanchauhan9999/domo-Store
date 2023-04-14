@@ -1,38 +1,20 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
+@media screen and (max-width:650px) {
+    .main-div-header{
+        display: block;
+    }
+    .search-input-header{
+        display: block;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 10px;
+    }
 }
-
-* {
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-h1,
-h2,
-p,
-ul {
-  margin: 0;
-}
-
-ul {
-  padding: 0;
-  list-style: none;
-}
-
-button {
-  padding: 0.5rem 1rem;
-  font-weight: bold;
+@media screen and (max-width:450px) {
+    .navbar{
+        font-size: 14px;
+    }
 }
