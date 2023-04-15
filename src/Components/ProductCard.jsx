@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addItem } from "../../store/slices/cartSlice";
-import Image from "next/image";
 
 const ProductsCard = (props) => {
   const { img, rating, title, price } = props;
@@ -26,7 +25,7 @@ const ProductsCard = (props) => {
     <>
       <div className="product_card rounded">
         <figure >
-          <Image src={img} alt="item-img" width="200" height="200" className="m-auto"/>
+          <img src={img} alt="item-img" className="m-auto"/>
         </figure>
         <strong className="rating">{rating}</strong>
         <h4 className="title">{title}</h4>
