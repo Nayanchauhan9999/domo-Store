@@ -153,7 +153,26 @@ svg {
         grid-template-columns: 1fr;
     }
 }
-
+.wishlist-product-main-div{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 1rem;
+}
+@media screen and (max-width:950px) {
+    .wishlist-product-main-div{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+@media screen and (max-width:800px) {
+    .wishlist-product-main-div{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media screen and (max-width:800px) {
+    .wishlist-product-main-div{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
 .product_card {
     background-color: inherit;
     // box-shadow: $card-shadow;
