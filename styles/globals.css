@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.main-div-header{
+    z-index: 1;
+}
 @media screen and (max-width:650px) {
     .main-div-header{
         display: block;

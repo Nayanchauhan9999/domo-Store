@@ -1,30 +1,53 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    isOpen : false,
-    proData : []
-}
+  proData: [],
+};
 const cartReducers = createSlice({
-    name:"cart",
-    initialState,
-    reducers:{
-        toggleCart(state,action){
-            state.isOpen = action.payload
-        },
-        addItem(state,action){
-            const newItemID = action.payload.id;
-            const existingItem = state.cartItmes.find(value => value.id === newItemID)
-            if(newItemID){
-                existingItem.quantity++
-            }else{
-                state.cartItmes.push(action.payload)
-            }
-        },
-        removeItem(){},
-        increseQuantity(){},
-        decreaseQuantity(){}
-    }
-})
+  name: "cart",
+  initialState,
+  reducers: {
+    addItem(state, action) {
+      const newID = action.payload.id;
+      const existingItem = state.proData.find((value) => value.id === newID);
+      if (existingItem) {
+        if (existingItem.quantity >= 5) {
+          return;
+        } else {
+          existingItem.quantity += 1;
+        }
+      } else {
+        state.proData.push(action.payload);
+      }
+    },
+    removeItem(state, action) {
+      state.proData = state.proData.filter(
+        (value) => value.id !== action.payload
+      );
+    },
+    increseQuantity(state, action) {
+      const existingItem = state.proData.find(
+        (value) => value.id === action.payload.id
+      );
+      if (existingItem.quantity >= 5) {
+        return;
+      } else {
+        existingItem.quantity += 1;
+      }
+    },
+    decreaseQuantity(state, action) {
+      const existingItem = state.proData.find(
+        (value) => value.id === action.payload.id
+      );
+      if (existingItem.quantity <= 1) {
+        return;
+      } else {
+        existingItem.quantity -= 1;
+      }
+    },
+  },
+});
 
-export const {toggleCart, addItem, removeItem, increseQuantity, decreaseQuantity} = cartReducers.actions
-export default cartReducers.reducer
+export const { addItem, removeItem, increseQuantity, decreaseQuantity } =
+  cartReducers.actions;
+export default cartReducers.reducer;

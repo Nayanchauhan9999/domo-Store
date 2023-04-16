@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { addItem } from "../../store/slices/cartSlice";
 
 const ProductsCard = (props) => {
-  const { img, rating, title, price } = props;
+  const { img, rating, title, price, id,quantity} = props;
 
   const [isAdded, setIsAdded] = useState(false);
 
@@ -11,11 +11,9 @@ const ProductsCard = (props) => {
 
   const handleAddToCart = () => {
     const item = { ...props };
-
     dispatch(addItem(item));
 
     setIsAdded(true);
-
     setTimeout(() => {
       setIsAdded(false);
     }, 3000);
