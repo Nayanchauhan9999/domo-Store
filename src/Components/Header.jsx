@@ -8,8 +8,8 @@ const Header = () => {
             <Link className="transition-all delay-150 duration-300 p-3 text-sky-50 hover:text-sky-100 hover:bg-sky-700" href="/">Home</Link>
             <Link className="transition-all delay-150 duration-300 p-3 text-sky-50 hover:text-sky-100 hover:bg-sky-700" href="/About">About</Link>
             <Link className="transition-all delay-150 duration-300 p-3 text-sky-50 hover:text-sky-100 hover:bg-sky-700" href="/Contact">Contact</Link>
-            <Link className="transition-all delay-150 duration-300 p-3 text-sky-50 hover:text-sky-100 hover:bg-sky-700" href="/Contact">Cart <span className="bg-red-500 ps-1 pe-1 rounded-full ms-1">1</span></Link>
-            <Link className="transition-all delay-150 duration-300 p-3 text-sky-50 hover:text-sky-100 hover:bg-sky-700" href="/Contact">Wishlist <span className="bg-red-500 ps-1 pe-1 rounded-full ms-1">1</span></Link>
+            <Link className="transition-all delay-150 duration-300 p-3 text-sky-50 hover:text-sky-100 hover:bg-sky-700" href="/Cart">Cart <span className="bg-red-500 ps-1 pe-1 rounded-full ms-1">1</span></Link>
+            <Link className="transition-all delay-150 duration-300 p-3 text-sky-50 hover:text-sky-100 hover:bg-sky-700" href="/Wishlist">Wishlist <span className="bg-red-500 ps-1 pe-1 rounded-full ms-1">1</span></Link>
         </div>
         <div>
           <input type="text" placeholder="Search Products" className="p-1 search-input-header ps-5 border rounded block lg:w-96 text-sky-600 md:w-64
