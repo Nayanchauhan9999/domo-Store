@@ -49,6 +49,12 @@ const Header = () => {
             </span>
           )}
         </Link>
+        <Link
+          className="transition-all delay-150 duration-300 p-3 text-sky-50 hover:text-sky-100 hover:bg-indigo-600 max-sm:text-sm"
+          href="/Login"
+        >
+          Login
+        </Link>
       </div>
       <input
         type="text"

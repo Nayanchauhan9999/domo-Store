@@ -5,7 +5,7 @@ import Link from "next/link";
 const EmptyWishlist = () => {
   return (
     <>
-      <div className="empty-wishlist-page h-80 flex flex-col justify-center items-center">
+      <div className="empty-wishlist-page my-24 flex flex-col justify-center items-center">
         <BsEmojiFrown className="w-28 h-28 text-slate-400" />
         <h1 className="text-2xl mt-3 font-sans text-slate-600">
           Your wishlist is Empty

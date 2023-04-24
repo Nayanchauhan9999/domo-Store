@@ -3,7 +3,7 @@ import {BsCartPlus} from "react-icons/bs"
 
 const EmptyCart = () => {
   return (
-    <>
+    <div className="my-32 max-sm:my-24">
       <div className="empty-cart flex items-center flex-col  h-72 border-box">
         <BsCartPlus className="text-slate-400" />
         <h2 className="text-2xl mt-3 font-sans text-slate-700">
@@ -19,7 +19,7 @@ const EmptyCart = () => {
           </p>
         </Link>
       </div>
-    </>
+    </div>
   );
 };
 
