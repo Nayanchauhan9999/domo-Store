@@ -22,7 +22,18 @@ const Header = () => {
         >
           Home
         </Link>
-
+        <Link
+          className="transition-all delay-150 duration-300 p-3 text-sky-50 hover:text-sky-100 hover:bg-indigo-600 max-sm:text-sm"
+          href="/About"
+        >
+          About
+        </Link>
+        <Link
+          className="transition-all delay-150 duration-300 p-3 text-sky-50 hover:text-sky-100 hover:bg-indigo-600 max-sm:text-sm"
+          href="/Contact"
+        >
+          Contact
+        </Link>
         <Link
           className="transition-all delay-150 duration-300 p-3 text-sky-50 hover:text-sky-100 hover:bg-indigo-600 max-sm:text-sm"
           href="/Cart"
@@ -44,19 +55,6 @@ const Header = () => {
               {proDataWishlist.length}
             </span>
           )}
-        </Link>
-
-        <Link
-          className="transition-all delay-150 duration-300 p-3 text-sky-50 hover:text-sky-100 hover:bg-indigo-600 max-sm:text-sm"
-          href="/About"
-        >
-          About
-        </Link>
-        <Link
-          className="transition-all delay-150 duration-300 p-3 text-sky-50 hover:text-sky-100 hover:bg-indigo-600 max-sm:text-sm"
-          href="/Contact"
-        >
-          Contact
         </Link>
         {!data ? (
           <Link
