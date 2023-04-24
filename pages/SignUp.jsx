@@ -48,6 +48,7 @@ const SignUp = () => {
             value
           );
           setCloneId(false)
+          localStorage.setItem("userData",JSON.stringify(value))
         }
         action.resetForm();
         router.push("/")

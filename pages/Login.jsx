@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import loginSchema from "../src/Schema/loginSchema";
 import { useRouter } from "next/router";
+import { useDispatch } from "react-redux";
+// import { login } from "../store/slices/localData";
 
 const Login = () => {
   const [allUserData, setAllUserData] = useState([]);
@@ -25,7 +27,7 @@ const Login = () => {
     email: "",
     password: "",
   };
-
+  const dispatch = useDispatch()
   const { handleChange, handleSubmit, values, errors, touched, handleBlur } =
     useFormik({
       initialValues,
@@ -43,6 +45,8 @@ const Login = () => {
           ) {
             return setErrorMsg("incorrect email or password");
           } else {
+            localStorage.setItem("userData",JSON.stringify(userDetails))
+            // dispatch(login(userDetails))
             router.push("/");
           }
         }
@@ -93,7 +97,7 @@ const Login = () => {
         </p>
         <p className="text-center my-3 tracking-wider">
           Does not have account ?
-          <Link href="SignUp" className="text-indigo-600 hover:underline ps-2">
+          <Link href="signup" className="text-indigo-600 hover:underline ps-2">
             Sign Up &rarr;
           </Link>
         </p>
